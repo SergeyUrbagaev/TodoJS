@@ -1,0 +1,90 @@
+body{
+	overflow: auto;
+}
+.wraper {
+min-height: 768px;
+max-width: 1366px;
+margin: 0 auto;
+margin-left: auto;
+margin-right: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+.conteiner {
+	max-width: 621px;
+	max-height: 500px;
+
+}
+.task-add {
+}
+.input-add {
+	min-width: 400px;
+	min-height: 50px;
+}
+.button-add {
+	min-width: 107px;
+	min-height: 50px;
+	border-radius: 10px;
+	padding: 18px, 30px, 18px, 30px;
+	background-color: #A672FF;
+	;
+
+
+}
+.tasks {
+	width: 100%;
+	
+}
+.task-bread {
+	min-height: 60px;
+	border-radius: 10px;
+	background-color: #F1F1F1;;
+	
+}
+.task-oil {
+	min-height: 60px;
+	border-radius: 10px;
+	background-color: #F1F1F1;;
+}
+.options {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	min-height: 60px;
+	border-radius: 10px;
+	background-color: #F1F1F1;
+	margin: 97px 0px 0px 0px;
+	
+	
+}
+.button-all {
+	min-height: 28px;
+	min-width: 127px;
+	border-radius: 10px;
+	background-color: #A672FF;
+
+	
+
+
+}
+.button-completed {
+	min-height: 28px;
+	min-width: 127px;
+	background-color: #FFFFFF;
+	border: 1px solid #A672FF;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+.button-notcomplet {
+	min-height: 28px;
+	min-width: 127px;
+	border-radius: 10px;
+
+	background-color: #FFFFFF;
+	border: 1px solid #A672FF;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
