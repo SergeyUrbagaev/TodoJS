@@ -34,20 +34,23 @@ justify-content: center;
 
 
 }
+.important {
+	font-weight: bold;
+	color: #A40E11; }
 .tasks {
 	width: 100%;
 	
 }
-.task-bread {
-	min-height: 60px;
-	border-radius: 10px;
-	background-color: #F1F1F1;;
-	
+.tasks-meny{
+
 }
-.task-oil {
+li {
 	min-height: 60px;
 	border-radius: 10px;
-	background-color: #F1F1F1;;
+	background-color: #F1F1F1;
+	margin: 0px 0px 20px 0px;
+	padding: 10px;
+	border: 2px solid black;
 }
 .options {
 	display: flex;
