@@ -1,32 +1,31 @@
-let buttonAdd = document.querySelector('.button-add');
-let inputAdd = document.querySelector('.input-add');
-let taskBread = document.querySelector('.task-bread');
-let todoList = [];
-if (localStorage.getItem('todo')) {
-	todoList = JSON.parse(localStorage.getItem('todo'));
-	displayMessages();
-}
-buttonAdd.addEventListener('click', function () {
-	let newTodo = {
-		todo: inputAdd.value,
-		checked: false,
-		important: false
+const button = document.querySelector('.button-add');
+const input = document.querySelector('.input-add');
+const taskmeny = document.querySelector('.task-bread');
+let prioritet = document.querySelector('.button-imp');
+
+// Функция приоритета задачи
+prioritet.onclick = function () {
+	prioritet.classList.toggle('is-important');
+	if (prioritet.classList.contains('is-important')) {
+		prioritet.textContent = 'Важная задача';
+	} else {
+		prioritet.textContent = 'Обычная задача';
+	}
+};
+
+// Функция вывода задачи в список
+button.onclick = function butClick() {
+	let content = document.createElement('li');
+	if (prioritet.classList.contains('is-important')) {
+		content.classList.add('is-important')
 	};
-	todoList.push(newTodo);
-	displayMessages();
-	localStorage.setItem('todo', JSON.stringify(todoList));
-});
+	content.innerHTML = input.value;
+	input.value = '';
+	taskmeny.append(content);
+	//добавление кнопки удаления
+	let delet = document.createElement('button');
+	delet.classList.add('delete');
+	delet.innerHTML = '&#11197';
+	content.append(delet);
+};
 
-function displayMessages() {
-	let displayMessages = '';
-	todoList.forEach(function (item, i) {
-		displayMessages += `
-		<li>
-			<input type = 'checkbox' id = 'item_${i}' ${item.checked ? 'checked' : ''}>
-			<label for='item_${i}'>${item.todo}</label>
-		</li>
-		`;
-		taskBread.innerHTML = displayMessages;
-
-	});
-}

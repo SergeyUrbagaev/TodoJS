@@ -31,12 +31,17 @@ justify-content: center;
 	padding: 18px, 30px, 18px, 30px;
 	background-color: #A672FF;
 	;
-
-
 }
-.important {
+.iportant{
+	text-align: center;
+}
+
+.button-imp {
 	font-weight: bold;
-	color: #A40E11; }
+	color: #A40E11; 
+	margin: 0 auto;
+}
+	
 .tasks {
 	width: 100%;
 	
@@ -51,6 +56,7 @@ li {
 	margin: 0px 0px 20px 0px;
 	padding: 10px;
 	border: 2px solid black;
+	position: relative;
 }
 .options {
 	display: flex;
@@ -62,9 +68,6 @@ li {
 	margin: 97px 0px 0px 0px;
 	
 	
-}
-.salam{
-	font-size: 20px;
 }
 .button-all {
 	min-height: 28px;
@@ -93,4 +96,23 @@ li {
 	border: 1px solid #A672FF;
 	box-sizing: border-box;
 	border-radius: 10px;
+}
+
+
+.is-important {
+	color: #5c8bf0;
+	background-color: #fdedf4;
+}
+
+.delete {
+	min-height: 10px;
+	min-width: 10px;
+	text-align: right;
+	position: absolute;
+	right: 15px;
+	/* background-color: #A672FF; */
+}
+.delete:hover{
+	background-color: #A40E11;
+	font-weight: bold;
 }
